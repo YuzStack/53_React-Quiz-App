@@ -1,9 +1,7 @@
 function HomePage() {
   return (
     <main className='flex min-h-screen flex-col px-3 py-2'>
-      <h1 className='mx-auto w-fit text-2xl font-bold text-[#61dafb]'>
-        React Quiz App
-      </h1>
+      <Header />
       <div className='mt-[10vh] flex-1 space-y-7'>
         <section>
           <h2 className='w-fit text-lg font-semibold'>Stats at a Glance</h2>
@@ -43,18 +41,32 @@ function HomePage() {
           </button>
         </section>
       </div>
-      <footer className='text-center'>
-        Designed and Developed by{' '}
-        <a
-          className='text-purple-400 underline active:text-purple-500'
-          href='https://www.linkedin.com/in/yusuf-oyinlola'
-          target='_blank'
-        >
-          Yusuf Oyinlola
-        </a>{' '}
-        as part of my React Mastery Journey.
-      </footer>
+      <Footer />
     </main>
+  );
+}
+
+function Header() {
+  return (
+    <h1 className='mx-auto w-fit text-2xl font-bold text-[#61dafb]'>
+      React Quiz App
+    </h1>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className='text-center'>
+      Designed and Developed by{' '}
+      <a
+        className='text-purple-400 underline active:text-purple-500'
+        href='https://www.linkedin.com/in/yusuf-oyinlola'
+        target='_blank'
+      >
+        Yusuf Oyinlola
+      </a>{' '}
+      as part of my React Mastery Journey.
+    </footer>
   );
 }
 

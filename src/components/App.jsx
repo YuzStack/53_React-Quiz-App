@@ -26,25 +26,27 @@ function App() {
 
   return (
     <div className='min-h-screen bg-[#0f172a] text-slate-100'>
-      {screen === 'home' ? (
-        <HomePage questions={QUESTIONS} onSetScreen={setScreen} />
-      ) : screen === 'quiz' ? (
-        <Quiz
-          question={curQues}
-          onNextQuestion={handleNextQues}
-          percentCompl={percentCompl}
-          isLastQues={isLastQues}
-          onSetScreen={setScreen}
-        />
-      ) : (
-        <QuizResult
-          score={score}
-          numQues={QUESTIONS.length}
-          scorePercent={scorePercent}
-          onSetScreen={setScreen}
-          onResetScore={handleResetScore}
-        />
-      )}
+      <div className='max-w-150 mx-auto'>
+        {screen === 'home' ? (
+          <HomePage questions={QUESTIONS} onSetScreen={setScreen} />
+        ) : screen === 'quiz' ? (
+          <Quiz
+            question={curQues}
+            onNextQuestion={handleNextQues}
+            percentCompl={percentCompl}
+            isLastQues={isLastQues}
+            onSetScreen={setScreen}
+          />
+        ) : (
+          <QuizResult
+            score={score}
+            numQues={QUESTIONS.length}
+            scorePercent={scorePercent}
+            onSetScreen={setScreen}
+            onResetScore={handleResetScore}
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-function HomePage() {
+function HomePage({ questions, onSetScreen }) {
   return (
     <main className='flex min-h-screen flex-col px-3 py-2'>
       <Header />
@@ -10,7 +10,9 @@ function HomePage() {
               <span className='text-lg font-bold'>
                 <i className='fa-solid fa-question'></i>
               </span>
-              <p className='text-center text-sm'>5 Questions</p>
+              <p className='text-center text-sm'>
+                {questions.length} Questions
+              </p>
             </div>
             <div className='flex w-fit flex-col items-center gap-1 rounded-lg bg-slate-100 p-2 text-gray-700'>
               <span className='text-lg font-bold'>
@@ -26,6 +28,7 @@ function HomePage() {
             </div>
           </div>
         </section>
+
         <section>
           <h2 className='w-fit text-lg font-semibold'>Topic Coverage</h2>
           <ul className='mt-2 list-inside list-disc space-y-1.5'>
@@ -35,8 +38,12 @@ function HomePage() {
             <li>🧮 Derived State Logic</li>
           </ul>
         </section>
+
         <section className='flex justify-center p-5 py-7'>
-          <button className='cursor-pointer rounded-xl bg-[#61dafb] px-3 py-2 text-lg text-gray-700 duration-300 hover:bg-[#61dafbe4]'>
+          <button
+            onClick={() => onSetScreen('quiz')}
+            className='cursor-pointer rounded-xl bg-[#61dafb] px-3 py-2 text-lg text-gray-700 duration-300 hover:bg-[#61dafbe4]'
+          >
             Start Quiz &rarr;
           </button>
         </section>

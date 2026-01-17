@@ -1,5 +1,6 @@
-const questions = [
+const QUESTIONS = [
   {
+    id: 1,
     question:
       "Which of the following is true about 'Lifting State Up' in React?",
     options: [
@@ -11,6 +12,7 @@ const questions = [
     correctAnswer: 1,
   },
   {
+    id: 2,
     question: "What is the primary purpose of the 'key' prop in lists?",
     options: [
       'To uniquely identify an element for CSS styling.',
@@ -21,6 +23,7 @@ const questions = [
     correctAnswer: 1,
   },
   {
+    id: 3,
     question:
       "When does a 'useEffect' hook with an empty dependency array `[]` run?",
     options: [
@@ -32,6 +35,7 @@ const questions = [
     correctAnswer: 2,
   },
   {
+    id: 4,
     question: "In React, what is 'Derived State'?",
     options: [
       'State that is fetched from an external API.',
@@ -42,6 +46,7 @@ const questions = [
     correctAnswer: 2,
   },
   {
+    id: 5,
     question:
       'What happens if you update state directly (e.g., `state.value = 5`) instead of using the setter function?',
     options: [
@@ -54,4 +59,4 @@ const questions = [
   },
 ];
 
-export default questions;
+export default QUESTIONS;

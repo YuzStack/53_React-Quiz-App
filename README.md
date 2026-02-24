@@ -4,7 +4,7 @@
 
 The React Quiz App is an interactive platform built to test knowledge of React.js through a clean, structured interface. The project focuses on state management and providing a cohesive user experience from the start of the quiz to the final results.
 
-[Live Preview](https://yuzstack-react-quiz-app.netlify.app/)
+**[Live Preview](https://yuzstack-react-quiz-app.netlify.app/)**
 
 ## 🛠️ Technical Stack
 
